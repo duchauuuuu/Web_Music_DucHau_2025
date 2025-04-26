@@ -20,18 +20,19 @@ const DisplayAlbum = ({album}) => {
     <>
         <Navbar/>
         <div className='mt-10 flex gap-8 flex-col md:flex-row md:items-end '>
-              <img className='w-48 rounded' src={albumData.image} alt=''></img>
+              <img className='w-48 rounded' src={albumdata.image} alt=''></img>
               <div className='flex flex-col'>
                 <p>Danh sách phát</p>
-                <h2 className='text-5xl font-bold mb-4 md:text-7xl'>{albumData.name}</h2>
-                <h4>{albumData.desc}</h4>
+                <h2 className='text-5xl font-bold mb-4 md:text-7xl'>{albumdata.name}</h2>
+                <h4>{albumdata.desc}</h4>
                 <p className='mt-1'>
                   <img className='inline-block w-5' src={assets.logo} alt=''></img>
                   <b>H-EchoTune</b>
 
-                  • 1,323,154 lượt thích
-                  • <b>50 bài hát</b>
-                  2 giờ 30 phút
+                  <b className='ml-2'>• 1,323,154 lượt thích</b>
+                  <b className='ml-1'>• 50 bài hát</b>
+                  <b className='ml-1'>• 2 giờ 30 phút</b>
+                  
                 </p>
               </div>
         </div>
@@ -51,7 +52,7 @@ const DisplayAlbum = ({album}) => {
                   </img>
                   {item.name}
                   </p>
-                <p className='text-[15px]'>{albumData.name}</p>
+                <p className='text-[15px]'>{albumdata.name}</p>
                 <p className='text-[15px] hidden sm:block'>5 days ago</p>
                 <p className='text-[15px] text-center'>{item.duration}</p>
             </div>

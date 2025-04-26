@@ -12,8 +12,8 @@ const Display = () => {
   const displayRef = useRef();
   const location= useLocation();
   const isAlbum = location.pathname.includes('album');
-  const albumId=  isAlbum ? location.pathname.split('/').pop : "";
-  const bgColor = isAlbum && albumsData.length > 0 ?  albumsData.find((item)=> (item._id === albumId)).bgColor : "#121212"
+  const albumId=  isAlbum ? location.pathname.split('/').pop() : "";
+  const bgColor = isAlbum && albumsData.length > 0 ?  albumsData.find((item)=> (item._id === albumId)).bgColour : "#121212"
   useEffect(()=>{
     if(isAlbum){
       displayRef.current.style.background = `linear-gradient(${bgColor},#121212)`;

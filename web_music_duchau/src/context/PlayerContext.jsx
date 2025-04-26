@@ -66,6 +66,7 @@ const PlayerContextProvider = ({ children }) => {
     const getSongsData = async () => {
         try {
              const response = await axios.get(`${url}/api/song/list`);
+            //  console.log(response.data.data);
              setSongsData(response.data.data);
              setTrack(response.data.data[0]);
         } catch (error) {
@@ -76,6 +77,7 @@ const PlayerContextProvider = ({ children }) => {
     const getAlbumsData = async () => {
         try {
              const response = await axios.get(`${url}/api/album/list`);
+            //  console.log(response.data.data);
              setAlbumsData(response.data.data);
             
         } catch (error) {
@@ -101,11 +103,13 @@ const PlayerContextProvider = ({ children }) => {
                 }
             })
     },[audioRef])
-
+    
     useEffect(()=>{
         getSongsData();
         getAlbumsData();
-    })
+        console.log(songsData);
+        console.log(albumsData)
+    },[])
 
     return (
         <PlayerContext.Provider value={{
