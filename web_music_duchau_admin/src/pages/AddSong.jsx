@@ -85,7 +85,7 @@ const AddSong = () => {
     </div>
     <div className='flex flex-col gap-2.5'>
       <p>Mô tả</p>
-      <input onChange={(e)=>{setDesc(e.target.value)}} value={desc} className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[max(40vw,250px)]' placeholder='Nhập ở đây' type='text' required></input>
+      <input onChange={(e)=>{setDesc(e.target.value)}} value={desc} className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[max(40vw,250px)]' placeholder='Nhập ở đây' type='text'></input>
     </div>
     <div className='flex flex-col gap-2.5'>
       <p>Album</p>
